@@ -197,10 +197,11 @@ export default function Home() {
               <Image
                 src="/profile.jpeg"
                 alt="Olivia Thommana"
-                width={300}
-                height={420}
+                fill
+                sizes="(max-width: 960px) 280px, 300px"
                 className="hero-photo"
                 priority
+                style={{ objectFit: 'cover', objectPosition: 'center top' }}
               />
             </div>
           </div>
