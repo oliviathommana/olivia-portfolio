@@ -192,8 +192,6 @@ export default function Home() {
                 <span className="dot dot-6"></span>
                 <span className="dot dot-7"></span>
               </div>
-              {/* Blue border-only decorative offset square */}
-              <div className="hero-deco-square"></div>
               <Image
                 src="/profile.jpeg"
                 alt="Olivia Thommana"
