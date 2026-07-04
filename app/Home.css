@@ -243,8 +243,10 @@
 /* Profile photo — bottom-right of frame, overlapping the deco square */
 .hero-photo {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  top: auto !important;
+  left: auto !important;
+  bottom: 0 !important;
+  right: 0 !important;
   width: calc(100% - 30px) !important;
   height: calc(100% - 30px) !important;
   object-fit: cover;
@@ -821,6 +823,10 @@ a.contact-card-val:hover {
     height: calc(100% - 20px);
   }
   .hero-photo {
+    top: auto !important;
+    left: auto !important;
+    bottom: 0 !important;
+    right: 0 !important;
     width: calc(100% - 20px) !important;
     height: calc(100% - 20px) !important;
   }
