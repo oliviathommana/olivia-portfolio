@@ -196,23 +196,21 @@
   to   { opacity: 1; transform: translateX(0); }
 }
 
-/* Photo frame container — sized to perfectly contain the photo */
+/* Photo frame container — sized to include the photo (300x420) + 30px offset */
 .hero-photo-frame {
   position: relative;
-  width: 300px;
-  height: 400px;
+  width: 330px;
+  height: 450px;
   flex-shrink: 0;
-  margin-top: 25px;
-  margin-left: 25px; /* Offset spacing to compensate for the deco box pushing left */
 }
 
-/* Blue border-only offset square frame (no fill) */
+/* Blue border-only square — top-left, peeking behind photo */
 .hero-deco-square {
   position: absolute;
-  top: -20px;
-  left: -20px;
-  width: 100%;
-  height: 100%;
+  top: 0;
+  left: 0;
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
   border-radius: 6px;
   border: 3px solid var(--primary);
   background: transparent;
@@ -222,7 +220,7 @@
 /* Decorative scattered dots around the photo area */
 .hero-dots {
   position: absolute;
-  inset: -60px -60px -40px -40px;
+  inset: -40px -40px -40px -40px;
   z-index: 2;
   pointer-events: none;
 }
@@ -242,12 +240,13 @@
 .dot-6  { width:  6px; height:  6px; top: 8%;  left: 85%; opacity: 0.45; }
 .dot-7  { width: 12px; height: 12px; top: 0%;  left: 70%; opacity: 0.12; }
 
-/* Profile photo — fills the frame exactly, sits on top of deco border */
+/* Profile photo — bottom-right of frame, overlapping the deco square */
 .hero-photo {
   position: absolute;
-  inset: 0;
-  width: 100% !important;
-  height: 100% !important;
+  bottom: 0;
+  right: 0;
+  width: calc(100% - 30px) !important;
+  height: calc(100% - 30px) !important;
   object-fit: cover;
   object-position: center top;
   border-radius: 4px;
@@ -812,10 +811,18 @@ a.contact-card-val:hover {
     font-size: 2.4rem;
   }
   .hero-photo-frame {
-    width: 230px;
-    height: 310px;
+    width: 220px;
+    height: 300px;
     margin-top: 15px;
     margin-left: 15px;
+  }
+  .hero-deco-square {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+  }
+  .hero-photo {
+    width: calc(100% - 20px) !important;
+    height: calc(100% - 20px) !important;
   }
   .projects-grid {
     grid-template-columns: 1fr;
