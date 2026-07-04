@@ -15,7 +15,22 @@ export default function Timeline() {
           const data = await res.json();
           // Sort by date ascending
           data.sort((a, b) => new Date(a.date) - new Date(b.date));
-          setActivities(data);
+          
+          // Filter out general/non-PM-VIKAS activities as requested
+          const excludedTitles = [
+            'google cloud agentic ai day',
+            'egg incubator circuit design',
+            'ieee brain battle round 2',
+            'credifai model optimization',
+            'iot interfacing study',
+            'trash2cash recommendation engine'
+          ];
+          const filtered = data.filter(act => {
+            const titleLower = (act.title || '').toLowerCase().trim();
+            return !excludedTitles.includes(titleLower);
+          });
+          
+          setActivities(filtered);
         }
       } catch (err) {
         console.error(err);

@@ -67,88 +67,41 @@ export default function PmVikas() {
         </div>
       </header>
 
-      {/* Program Details + Calendar */}
-      <div className="pm-layout" style={{ marginBottom: '60px' }}>
-        {/* Left: Program Scope */}
-        <div>
-          <div className="pm-card glass">
-            <h2 className="pm-card-title">Program Scope</h2>
-            <div className="detail-list" style={{ marginTop: '16px' }}>
-              <div className="detail-item">
-                <span className="detail-label">Training Center</span>
-                <span className="detail-value">IIIT Kottayam Campus</span>
-              </div>
-              <div className="detail-item">
-                <span className="detail-label">Funding Agency</span>
-                <span className="detail-value">Ministry of Minority Affairs, GoI</span>
-              </div>
-              <div className="detail-item">
-                <span className="detail-label">Evaluation</span>
-                <span className="detail-value">A Grade (Distinction)</span>
-              </div>
-              <div className="detail-item">
-                <span className="detail-label">Target Role</span>
-                <span className="detail-value">IoT System Support &amp; Assembly</span>
-              </div>
-              <div className="detail-item">
-                <span className="detail-label">Programme</span>
-                <span className="detail-value">PM-VIKAS (Pradhan Mantri Virasat Ka Samvardhan)</span>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        {/* Right: Sidebar quick facts */}
-        <div>
-          <div className="sidebar-box glass">
-            <h3 className="sidebar-title">Quick Facts</h3>
-            <div className="detail-list">
-              <div className="detail-item">
-                <span className="detail-label">Scheme</span>
-                <span className="detail-value">Central Government Skill Development</span>
-              </div>
-              <div className="detail-item">
-                <span className="detail-label">Domain</span>
-                <span className="detail-value">IoT &amp; Embedded Systems</span>
-              </div>
-              <div className="detail-item">
-                <span className="detail-label">Mode</span>
-                <span className="detail-value">Hands-on Lab + Theory</span>
-              </div>
-            </div>
+
+      {/* Dark Theme Section Wrapper for Timeline & Calendar */}
+      <div data-theme="dark" style={{ background: 'var(--bg)', color: 'var(--fg)', padding: '40px 20px', borderRadius: '24px', margin: '40px 0', boxShadow: 'var(--shadow-blue)' }}>
+        
+        {/* Timeline Section */}
+        <section
+          className="pm-timeline-section"
+          style={{ paddingBottom: '60px' }}
+        >
+          <div className="section-header" style={{ textAlign: 'left', marginBottom: '10px' }}>
+            <span className="section-subtitle">Journey</span>
+            <h2 className="section-title">Day-by-Day Timeline</h2>
           </div>
-        </div>
+          <Timeline />
+        </section>
+
+        {/* Activity Calendar — main section */}
+        <section
+          className="pm-calendar-section"
+          style={{ borderTop: '1px solid var(--card-border)', paddingTop: '60px', paddingBottom: '20px' }}
+        >
+          <div className="section-header" style={{ textAlign: 'left', marginBottom: '30px' }}>
+            <span className="section-subtitle">Live Tracker</span>
+            <h2 className="section-title">Daily Activity Log</h2>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.98rem', maxWidth: '700px' }}>
+              This calendar logs tasks completed, system tests run, and research items covered during the
+              internship at IIIT Kottayam. Use the calendar below to add, modify, or delete entries directly to the Vercel Database.
+            </p>
+          </div>
+          <div className="pm-calendar-container glass" style={{ padding: '30px' }}>
+            <Calendar embedded={true} />
+          </div>
+        </section>
       </div>
-
-      {/* Timeline Section */}
-      <section
-        className="pm-timeline-section"
-        style={{ paddingTop: '20px', paddingBottom: '60px' }}
-      >
-        <div className="section-header" style={{ textAlign: 'left', marginBottom: '10px' }}>
-          <span className="section-subtitle">Journey</span>
-          <h2 className="section-title">Day-by-Day Timeline</h2>
-        </div>
-        <Timeline />
-      </section>
-
-      {/* Activity Calendar — main section */}
-      <section
-        className="pm-calendar-section"
-        style={{ borderTop: '1px solid var(--card-border)', paddingTop: '60px', paddingBottom: '60px' }}
-      >
-        <div className="section-header" style={{ textAlign: 'left', marginBottom: '30px' }}>
-          <span className="section-subtitle">Live Tracker</span>
-          <h2 className="section-title">Daily Activity Log</h2>
-          <p style={{ color: 'var(--text-muted)', fontSize: '0.98rem', maxWidth: '700px' }}>
-            This calendar logs tasks completed, system tests run, and research items covered during the
-            internship at IIIT Kottayam. Use the calendar below to add, modify, or delete entries directly to the Vercel Database.
-          </p>
-        </div>
-        <div className="pm-calendar-container glass" style={{ padding: '30px' }}>
-          <Calendar embedded={true} />
-        </div>
-      </section>
     </div>
   );
 }
