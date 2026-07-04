@@ -1,0 +1,422 @@
+.cal-page-root {
+  padding: 60px 0 100px;
+}
+
+.cal-header {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.search-container {
+  position: relative;
+  width: 320px;
+}
+
+.search-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--card-border);
+  color: var(--foreground);
+  padding: 12px 16px 12px 40px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.search-input:focus {
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 15px rgba(147, 51, 234, 0.15);
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+/* Grid Layout */
+.cal-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1.8fr;
+  gap: 30px;
+}
+
+@media (max-width: 900px) {
+  .cal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Calendar Month component */
+.cal-box {
+  padding: 30px;
+  height: fit-content;
+}
+
+.cal-month-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.cal-month-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
+}
+
+.cal-nav-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--card-border);
+  color: var(--foreground);
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cal-nav-btn:hover {
+  background: rgba(147, 51, 234, 0.15);
+  border-color: var(--primary);
+}
+
+.cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--secondary);
+  margin-bottom: 12px;
+}
+
+.cal-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.cal-day-cell {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition);
+}
+
+.cal-day-cell:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.cal-day-cell.outside {
+  color: rgba(255, 255, 255, 0.15);
+  cursor: default;
+}
+
+.cal-day-cell.outside:hover {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.04);
+}
+
+.cal-day-cell.today {
+  border-color: var(--secondary);
+  background: rgba(8, 145, 178, 0.05);
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.cal-day-cell.selected {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: white !important;
+  box-shadow: 0 0 15px rgba(147, 51, 234, 0.4);
+}
+
+.cal-day-cell.has-activity {
+  background: rgba(147, 51, 234, 0.15); /* var(--primary) with opacity */
+  color: var(--primary);
+  font-weight: 700;
+  border-color: rgba(147, 51, 234, 0.3);
+}
+
+.cal-has-activity {
+  position: absolute;
+  bottom: 6px;
+  width: 5px;
+  height: 5px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--primary);
+}
+
+.cal-day-cell.selected .cal-has-activity {
+  background-color: white;
+}
+
+/* Activity detail panel */
+.activity-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.activity-card {
+  padding: 30px;
+  transition: var(--transition);
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.activity-title {
+  font-size: 1.35rem;
+  color: var(--foreground);
+}
+
+.activity-date {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  background: rgba(8, 145, 178, 0.1);
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(8, 145, 178, 0.2);
+  font-weight: 600;
+}
+
+.activity-status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-completed {
+  background: rgba(5, 150, 105, 0.12);
+  color: #34d399;
+  border: 1px solid rgba(5, 150, 105, 0.2);
+}
+
+.status-in_progress {
+  background: rgba(245, 158, 11, 0.12);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.status-planned {
+  background: rgba(59, 130, 246, 0.12);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.activity-desc {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.activity-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 16px;
+}
+
+.edit-btn {
+  background: transparent;
+  border: 1px solid rgba(8, 145, 178, 0.4);
+  color: var(--secondary);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.edit-btn:hover {
+  background: rgba(8, 145, 178, 0.1);
+  color: #22d3ee;
+}
+
+.delete-btn {
+  background: transparent;
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  color: #f87171;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.delete-btn:hover {
+  background: rgba(220, 38, 38, 0.1);
+  color: #ef4444;
+}
+
+/* Forms */
+.form-box {
+  padding: 30px;
+}
+
+.form-title {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.form-label {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.form-input, .form-select, .form-textarea {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--card-border);
+  color: var(--foreground);
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--secondary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.cancel-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-muted);
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cancel-btn:hover {
+  color: var(--foreground);
+  border-color: var(--foreground);
+}
+
+/* Toast Notifications */
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toast {
+  padding: 14px 24px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(8px);
+}
+
+.toast-success {
+  background: rgba(5, 150, 105, 0.85);
+  border: 1px solid rgba(5, 150, 105, 0.3);
+}
+
+.toast-error {
+  background: rgba(220, 38, 38, 0.85);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+}
+
+.toast-info {
+  background: rgba(8, 145, 178, 0.85);
+  border: 1px solid rgba(8, 145, 178, 0.3);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%) scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Embedded specific styling modifications */
+.cal-component-root.embedded .cal-grid {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.cal-component-root.embedded .cal-box,
+.cal-component-root.embedded .activity-card,
+.cal-component-root.embedded .form-box {
+  padding: 20px;
+  background: rgba(13, 9, 23, 0.4);
+}
+
+.cal-component-root.embedded .cal-day-cell {
+  font-size: 0.85rem;
+}

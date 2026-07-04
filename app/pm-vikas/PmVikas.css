@@ -1,0 +1,266 @@
+.pmvikas-root {
+  padding: 60px 0 100px;
+}
+
+.pmvikas-hero {
+  position: relative;
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+  overflow: hidden;
+}
+
+.pmvikas-hero-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  opacity: 0.85;
+  mask-image: radial-gradient(circle at 60% 50%, black 30%, transparent 85%);
+  -webkit-mask-image: radial-gradient(circle at 60% 50%, black 30%, transparent 85%);
+  z-index: 0;
+}
+
+.pmvikas-header {
+  max-width: 800px;
+  position: relative;
+  z-index: 2;
+}
+
+.pm-badge {
+  display: inline-block;
+  background: rgba(var(--primary-rgb), 0.12);
+  border: 1px solid rgba(var(--primary-rgb), 0.3);
+  color: var(--primary-light);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}
+
+.pmvikas-title {
+  font-size: 3rem;
+  font-family: 'Outfit', sans-serif;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  color: var(--fg);
+}
+
+.pmvikas-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 1024px) {
+  .pmvikas-hero-bg {
+    opacity: 0.35;
+    width: 100%;
+    mask-image: radial-gradient(circle, black 30%, transparent 95%);
+    -webkit-mask-image: radial-gradient(circle, black 30%, transparent 95%);
+  }
+}
+
+.meta-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.meta-icon {
+  background: rgba(var(--secondary-rgb), 0.1);
+  color: var(--secondary);
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meta-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-label {
+  font-size: 0.75rem;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+}
+
+.meta-val {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+/* Grid layout for main content */
+.pm-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.pm-card {
+  padding: 40px;
+  margin-bottom: 30px;
+}
+
+.pm-card:last-child {
+  margin-bottom: 0;
+}
+
+.pm-card-title {
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+  color: var(--fg);
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: 12px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.course-item {
+  display: flex;
+  gap: 16px;
+}
+
+.course-num {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.course-detail h4 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: var(--fg);
+}
+
+.course-detail p {
+  font-size: 0.88rem;
+  color: var(--fg-muted);
+  line-height: 1.5;
+}
+
+/* Projects/Labs list */
+.labs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lab-item {
+  border-left: 3px solid var(--secondary);
+  padding-left: 20px;
+}
+
+.lab-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--fg);
+}
+
+.lab-desc {
+  font-size: 0.9rem;
+  color: var(--fg-muted);
+  line-height: 1.6;
+}
+
+/* Sidebar components */
+.sidebar-box {
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.sidebar-box:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-title {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--fg);
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detail-label {
+  font-size: 0.78rem;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+}
+
+.detail-value {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--fg);
+}
+
+/* skill-tag for pm-vikas tech stack */
+.skill-tag {
+  background: rgba(var(--primary-rgb), 0.1);
+  border: 1px solid rgba(var(--primary-rgb), 0.2);
+  color: var(--fg-muted);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.skill-tag:hover {
+  background: rgba(var(--primary-rgb), 0.2);
+  color: var(--fg);
+}
+
+@media (max-width: 1024px) {
+  .pm-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .pmvikas-title {
+    font-size: 2.2rem;
+  }
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+}

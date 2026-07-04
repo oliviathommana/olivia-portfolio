@@ -1,0 +1,121 @@
+[
+  {
+    "id": "1",
+    "date": "2026-06-25",
+    "title": "Portfolio Development",
+    "description": "Designed and built personal web portfolio with interactive WebGL radar graphics and admin controls.",
+    "status": "completed"
+  },
+  {
+    "id": "2",
+    "date": "2026-06-24",
+    "title": "Google Cloud Agentic AI Day",
+    "description": "Submitted conceptual proposal for LLM orchestration using Google Cloud infrastructure.",
+    "status": "completed"
+  },
+  {
+    "id": "3",
+    "date": "2026-06-23",
+    "title": "Egg Incubator Circuit Design",
+    "description": "Wired full control circuit on stripboard with Arduino Uno, DHT22 sensor, and dual relay module.",
+    "status": "completed"
+  },
+  {
+    "id": "4",
+    "date": "2026-06-20",
+    "title": "IEEE Brain Battle Round 2",
+    "description": "Competed in logical reasoning, technical MCQs, and live coding puzzles in IEEE community event.",
+    "status": "completed"
+  },
+  {
+    "id": "5",
+    "date": "2026-06-15",
+    "title": "CredifAI Model Optimization",
+    "description": "Refined the NLP classifier for real-time fake news detection on political articles.",
+    "status": "completed"
+  },
+  {
+    "id": "6",
+    "date": "2026-06-10",
+    "title": "IoT Interfacing Study",
+    "description": "Configured MQTT communication protocols on ESP32 microcontrollers for IIIT Kottayam course.",
+    "status": "completed"
+  },
+  {
+    "id": "7",
+    "date": "2026-06-05",
+    "title": "Trash2Cash Recommendation Engine",
+    "description": "Implemented waste classification logic and reward calculation routines using MongoDB.",
+    "status": "completed"
+  },
+  {
+    "id": "9",
+    "date": "2026-06-19",
+    "title": "Day 01: Introduction to IoT & Ecosystem",
+    "description": "Inauguration of the PM-VIKAS IoT assistant training program. Introduced to IoT nodes, device-to-cloud architectures, real-world smart systems (cities, grid networks), and communication layers.",
+    "status": "completed"
+  },
+  {
+    "id": "10",
+    "date": "2026-06-20",
+    "title": "Day 02: Microcontroller Architectures & IDE",
+    "description": "Study of Arduino Uno and ESP32 board layouts. Installation of Arduino IDE software, configuring port selections, writing basic C script routines, and flashing standard status LED programs.",
+    "status": "completed"
+  },
+  {
+    "id": "11",
+    "date": "2026-06-22",
+    "title": "Day 03: Basic Electronic Components",
+    "description": "Detailed analysis of electronic devices including Resistors, Capacitors, and Light Emitting Diodes (LEDs). Practical hands-on breadboard wiring configurations and simple circuit design rules.",
+    "status": "completed"
+  },
+  {
+    "id": "12",
+    "date": "2026-06-23",
+    "title": "Day 04: Hardware Measurement & GPIOs",
+    "description": "Configuring and testing digital/analog General Purpose Input/Output (GPIO) pins. Measuring voltage, loop currents, and resistance values across wired test circuits using a digital multimeter.",
+    "status": "completed"
+  },
+  {
+    "id": "13",
+    "date": "2026-06-24",
+    "title": "Day 05: Interfacing LDR (Light Sensors)",
+    "description": "Interfacing Light Dependent Resistors (LDR) to read changing analog light intensity levels. Programmed thresholds to trigger output alerts based on ambient illumination changes.",
+    "status": "completed"
+  },
+  {
+    "id": "14",
+    "date": "2026-06-25",
+    "title": "Day 06: Interfacing DHT11 Temperature Sensor",
+    "description": "Interfacing the DHT11 sensor to monitor environmental temperature and humidity levels. Written data validation logic to filter out noise fluctuations and format values for transmission.",
+    "status": "completed"
+  },
+  {
+    "id": "15",
+    "date": "2026-06-26",
+    "title": "Day 07: ESP32 WiFi & Network Protocols",
+    "description": "Setting up the ESP32 microcontroller's Wi-Fi module. Establishing station (STA) connections to local networks and checking communication protocols (IP addressing, TCP client/server models).",
+    "status": "completed"
+  },
+  {
+    "id": "16",
+    "date": "2026-06-27",
+    "title": "Day 08: Blynk IoT Cloud Setup & Auth",
+    "description": "Created developer accounts on Blynk IoT Cloud. Set up device templates, virtual datastreams, and generated secure Authentication Tokens. Configured basic mobile application dashboards.",
+    "status": "completed"
+  },
+  {
+    "id": "17",
+    "date": "2026-06-29",
+    "title": "Day 09: Real-time Cloud Telemetry (Blynk)",
+    "description": "Programmed the ESP32 to upload environmental parameters (LDR intensity and DHT11 values) to the Blynk Cloud dashboard in real-time. Verified low-latency response and remote app widgets.",
+    "status": "completed"
+  },
+  {
+    "id": "18",
+    "date": "2026-06-30",
+    "title": "Day 10: ThingSpeak Logger & Capstone",
+    "description": "Linked the ESP32 to the ThingSpeak server for long-term data logging and visualization. Assembled the final Capstone Project: an integrated Smart Home System that tracks sensors and controls output relays.",
+    "status": "completed"
+  }
+]
