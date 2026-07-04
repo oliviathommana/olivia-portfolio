@@ -196,18 +196,18 @@
   to   { opacity: 1; transform: translateX(0); }
 }
 
-/* Photo frame container — sized to perfectly contain the photo */
+/* Photo frame container — square to match the uploaded image aspect ratio */
 .hero-photo-frame {
   position: relative;
-  width: 300px;
-  height: 420px;
+  width: 340px;
+  height: 340px;
   flex-shrink: 0;
 }
 
 /* Decorative scattered dots around the photo area */
 .hero-dots {
   position: absolute;
-  inset: -30px -30px -30px -30px;
+  inset: -20px -20px -20px -20px;
   z-index: 2;
   pointer-events: none;
 }
@@ -227,7 +227,7 @@
 .dot-6  { width:  6px; height:  6px; top: 8%;  left: 85%; opacity: 0.45; }
 .dot-7  { width: 12px; height: 12px; top: 0%;  left: 70%; opacity: 0.12; }
 
-/* Profile photo — fills the frame exactly */
+/* Profile photo — fills the frame exactly with soft rounded corners */
 .hero-photo {
   position: absolute;
   inset: 0;
@@ -235,7 +235,7 @@
   height: 100% !important;
   object-fit: cover;
   object-position: center top;
-  border-radius: 4px;
+  border-radius: 12px;
   z-index: 1;
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.13);
   display: block;
@@ -773,7 +773,7 @@ a.contact-card-val:hover {
   }
   .hero-photo-frame {
     width: 270px;
-    height: 380px;
+    height: 270px;
     margin: 20px auto 0;
   }
   .about-grid {
@@ -797,7 +797,7 @@ a.contact-card-val:hover {
   }
   .hero-photo-frame {
     width: 220px;
-    height: 310px;
+    height: 220px;
     margin: 15px auto 0;
   }
   .projects-grid {
