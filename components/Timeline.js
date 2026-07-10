@@ -16,18 +16,10 @@ export default function Timeline() {
           // Sort by date ascending
           data.sort((a, b) => new Date(a.date) - new Date(b.date));
           
-          // Filter out general/non-PM-VIKAS activities as requested
-          const excludedTitles = [
-            'google cloud agentic ai day',
-            'egg incubator circuit design',
-            'ieee brain battle round 2',
-            'credifai model optimization',
-            'iot interfacing study',
-            'trash2cash recommendation engine'
-          ];
+          // Show only PM-VIKAS training days (titles starting with "Day ")
           const filtered = data.filter(act => {
-            const titleLower = (act.title || '').toLowerCase().trim();
-            return !excludedTitles.includes(titleLower);
+            const title = (act.title || '').trim();
+            return /^Day\s+\d+/i.test(title);
           });
           
           setActivities(filtered);
