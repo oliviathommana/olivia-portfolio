@@ -4,98 +4,135 @@
     "date": "2026-06-25",
     "title": "Portfolio Development",
     "description": "Designed and built personal web portfolio with interactive WebGL radar graphics and admin controls.",
-    "status": "completed"
+    "status": "completed",
+    "time": "10:00 AM – 6:00 PM"
   },
   {
     "id": "2",
     "date": "2026-06-24",
     "title": "Google Cloud Agentic AI Day",
     "description": "Submitted conceptual proposal for LLM orchestration using Google Cloud infrastructure.",
-    "status": "completed"
+    "status": "completed",
+    "time": "9:00 AM – 5:00 PM"
   },
   {
     "id": "3",
     "date": "2026-06-23",
     "title": "Egg Incubator Circuit Design",
     "description": "Wired full control circuit on stripboard with Arduino Uno, DHT22 sensor, and dual relay module.",
-    "status": "completed"
+    "status": "completed",
+    "time": "2:00 PM – 6:00 PM"
   },
   {
     "id": "4",
     "date": "2026-06-20",
     "title": "IEEE Brain Battle Round 2",
     "description": "Competed in logical reasoning, technical MCQs, and live coding puzzles in IEEE community event.",
-    "status": "completed"
+    "status": "completed",
+    "time": "10:00 AM – 1:00 PM"
   },
-
   {
     "id": "9",
     "date": "2026-06-19",
     "title": "Day 01: Introduction to IoT & Ecosystem",
     "description": "Inauguration of the PM-VIKAS IoT assistant training program. Introduced to IoT nodes, device-to-cloud architectures, real-world smart systems (cities, grid networks), and communication layers.",
-    "status": "completed"
+    "status": "completed",
+    "time": "9:00 AM – 5:00 PM"
   },
   {
     "id": "10",
     "date": "2026-06-20",
     "title": "Day 02: Microcontroller Architectures & IDE",
     "description": "Study of Arduino Uno and ESP32 board layouts. Installation of Arduino IDE software, configuring port selections, writing basic C script routines, and flashing standard status LED programs.",
-    "status": "completed"
+    "status": "completed",
+    "time": "9:00 AM – 5:00 PM"
   },
   {
     "id": "11",
     "date": "2026-06-22",
     "title": "Day 03: Basic Electronic Components",
     "description": "Detailed analysis of electronic devices including Resistors, Capacitors, and Light Emitting Diodes (LEDs). Practical hands-on breadboard wiring configurations and simple circuit design rules.",
-    "status": "completed"
+    "status": "completed",
+    "time": "9:00 AM – 5:00 PM"
   },
   {
     "id": "12",
     "date": "2026-06-23",
     "title": "Day 04: Hardware Measurement & GPIOs",
     "description": "Configuring and testing digital/analog General Purpose Input/Output (GPIO) pins. Measuring voltage, loop currents, and resistance values across wired test circuits using a digital multimeter.",
-    "status": "completed"
+    "status": "completed",
+    "time": "9:00 AM – 5:00 PM"
   },
   {
     "id": "13",
     "date": "2026-06-24",
     "title": "Day 05: Interfacing LDR (Light Sensors)",
     "description": "Interfacing Light Dependent Resistors (LDR) to read changing analog light intensity levels. Programmed thresholds to trigger output alerts based on ambient illumination changes.",
-    "status": "completed"
+    "status": "completed",
+    "time": "9:00 AM – 5:00 PM"
   },
   {
     "id": "14",
     "date": "2026-06-25",
     "title": "Day 06: Interfacing DHT11 Temperature Sensor",
     "description": "Interfacing the DHT11 sensor to monitor environmental temperature and humidity levels. Written data validation logic to filter out noise fluctuations and format values for transmission.",
-    "status": "completed"
+    "status": "completed",
+    "time": "9:00 AM – 5:00 PM"
   },
   {
     "id": "15",
     "date": "2026-06-26",
     "title": "Day 07: ESP32 WiFi & Network Protocols",
     "description": "Setting up the ESP32 microcontroller's Wi-Fi module. Establishing station (STA) connections to local networks and checking communication protocols (IP addressing, TCP client/server models).",
-    "status": "completed"
+    "status": "completed",
+    "time": "9:00 AM – 5:00 PM"
   },
   {
     "id": "16",
     "date": "2026-06-27",
     "title": "Day 08: Blynk IoT Cloud Setup & Auth",
     "description": "Created developer accounts on Blynk IoT Cloud. Set up device templates, virtual datastreams, and generated secure Authentication Tokens. Configured basic mobile application dashboards.",
-    "status": "completed"
+    "status": "completed",
+    "time": "9:00 AM – 5:00 PM"
   },
   {
     "id": "17",
     "date": "2026-06-29",
     "title": "Day 09: Real-time Cloud Telemetry (Blynk)",
     "description": "Programmed the ESP32 to upload environmental parameters (LDR intensity and DHT11 values) to the Blynk Cloud dashboard in real-time. Verified low-latency response and remote app widgets.",
-    "status": "completed"
+    "status": "completed",
+    "time": "9:00 AM – 5:00 PM"
   },
   {
     "id": "18",
     "date": "2026-06-30",
     "title": "Day 10: ThingSpeak Logger & Capstone",
     "description": "Linked the ESP32 to the ThingSpeak server for long-term data logging and visualization. Assembled the final Capstone Project: an integrated Smart Home System that tracks sensors and controls output relays.",
-    "status": "completed"
+    "status": "completed",
+    "time": "9:00 AM – 5:00 PM"
+  },
+  {
+    "id": "19",
+    "date": "2026-07-06",
+    "title": "Day 11: Networking Fundamentals & Cisco Packet Tracer",
+    "description": "Explored the fundamentals of computer networking, including networking, internetworking, the Network Layer, IPv4, IPv6, IP addressing, and subnet masking concepts. Gained hands-on experience in Cisco Packet Tracer by establishing a wired connection between two end devices using a Copper Cross-Over cable, configuring basic network settings, and verifying communication. Learned about different network cable types and their applications in wired communication. Additionally, collaborated with the team to explore MSME Hackathon 6.0 problem statements and brainstorm innovative IoT-based project ideas.",
+    "status": "completed",
+    "time": "9:00 AM – 5:00 PM"
+  },
+  {
+    "id": "20",
+    "date": "2026-07-07",
+    "title": "Day 12: DHCP Configuration & LAN Simulation in Cisco Packet Tracer",
+    "description": "Configured a Local Area Network (LAN) in Cisco Packet Tracer by connecting a server, switch, hubs, and multiple end devices. Implemented DHCP to dynamically assign IP addresses while configuring the server with a static IP address. Verified network connectivity through ping tests between different hubs and the server, gaining hands-on experience in IP addressing, subnet masking, dynamic host configuration, and LAN communication.",
+    "status": "completed",
+    "time": "9:00 AM – 5:00 PM"
+  },
+  {
+    "id": "21",
+    "date": "2026-07-08",
+    "title": "Day 13: Router Configuration & Inter-Network Communication",
+    "description": "Reviewed the previous day's DHCP-based LAN implementation and advanced to router configuration, exploring FastEthernet and GigabitEthernet interfaces for inter-network communication. Worked on implementing networks with both dynamic (DHCP) and static IP addressing by connecting an additional hub through a router and verifying communication between different subnets. Additionally, completed topology design tasks involving a DHCP-enabled LAN integrated with a static-IP network and a multi-router network consisting of five routers, five switches, and end devices to strengthen practical understanding of routing, IP addressing, and network connectivity in Cisco Packet Tracer.",
+    "status": "completed",
+    "time": "9:00 AM – 5:00 PM"
   }
 ]

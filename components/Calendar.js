@@ -22,6 +22,7 @@ export default function Calendar({ embedded = false }) {
   const [formTitle, setFormTitle] = useState('');
   const [formDesc, setFormDesc] = useState('');
   const [formStatus, setFormStatus] = useState('completed');
+  const [formTime, setFormTime] = useState('');
 
   const addToast = (message, type = 'success') => {
     const id = Date.now();
@@ -75,12 +76,14 @@ export default function Calendar({ embedded = false }) {
       setFormTitle(existing.title);
       setFormDesc(existing.description);
       setFormStatus(existing.status);
+      setFormTime(existing.time || '');
       setIsEditing(true);
     } else {
       setFormActivityId(null);
       setFormTitle('');
       setFormDesc('');
       setFormStatus('completed');
+      setFormTime('');
       setIsEditing(false);
     }
   };
@@ -106,6 +109,7 @@ export default function Calendar({ embedded = false }) {
           title: formTitle,
           description: formDesc,
           status: formStatus,
+          time: formTime,
           password: apiPassword
         })
       });
@@ -150,6 +154,7 @@ export default function Calendar({ embedded = false }) {
         setFormTitle('');
         setFormDesc('');
         setFormStatus('completed');
+        setFormTime('');
         setIsEditing(false);
       } else {
         addToast('Failed to delete activity.', 'error');
@@ -365,9 +370,15 @@ export default function Calendar({ embedded = false }) {
 
             {selectedActivity ? (
               <div>
-                <h3 className="activity-title" style={{ marginBottom: '14px' }}>
+                <h3 className="activity-title" style={{ marginBottom: '10px' }}>
                   {selectedActivity.title}
                 </h3>
+                {selectedActivity.time && (
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '12px' }}>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--secondary)', flexShrink: 0 }}><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span style={{ fontSize: '0.82rem', color: 'var(--secondary)', fontFamily: 'Outfit', fontWeight: 500 }}>{selectedActivity.time}</span>
+                  </div>
+                )}
                 <p className="activity-desc">
                   {selectedActivity.description}
                 </p>
@@ -375,7 +386,10 @@ export default function Calendar({ embedded = false }) {
                     <button className="delete-btn" onClick={handleDelete}>
                       Delete
                     </button>
-                    <button className="edit-btn" onClick={() => setIsEditing(true)}>
+                    <button className="edit-btn" onClick={() => {
+                      setFormTime(selectedActivity.time || '');
+                      setIsEditing(true);
+                    }}>
                       Modify
                     </button>
                   </div>
@@ -393,6 +407,7 @@ export default function Calendar({ embedded = false }) {
                       setFormTitle('');
                       setFormDesc('');
                       setFormStatus('completed');
+                      setFormTime('');
                     }}
                     style={{ marginTop: '20px', padding: '8px 16px', fontSize: '0.85rem' }}
                   >
@@ -429,6 +444,17 @@ export default function Calendar({ embedded = false }) {
                     onChange={(e) => setFormDesc(e.target.value)}
                     placeholder="Provide details about tasks completed, problems solved, or technologies analyzed..."
                     className="form-textarea"
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label className="form-label">Time Schedule</label>
+                  <input
+                    type="text"
+                    value={formTime}
+                    onChange={(e) => setFormTime(e.target.value)}
+                    placeholder="E.g., 9:00 AM – 5:00 PM"
+                    className="form-input"
                   />
                 </div>
 
@@ -481,6 +507,7 @@ export default function Calendar({ embedded = false }) {
                         setFormTitle(act.title);
                         setFormDesc(act.description);
                         setFormStatus(act.status);
+                        setFormTime(act.time || '');
                         setIsEditing(true);
                       }}
                       style={{ 
@@ -492,7 +519,7 @@ export default function Calendar({ embedded = false }) {
                       }}
                     >
                       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
-                        <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{act.date}</span>
+                        <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{act.date}{act.time ? ` · ${act.time}` : ''}</span>
                         <span className={`activity-status status-${act.status}`} style={{ fontSize: '0.7rem', padding: '2px 6px' }}>
                           {act.status}
                         </span>

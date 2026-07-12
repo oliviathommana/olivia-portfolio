@@ -1,22 +1,15 @@
 import { NextResponse } from 'next/server';
 import { sql } from '@vercel/postgres';
-import fs from 'fs';
-import path from 'path';
+import entries from '../../../calendar_db.json';
 
 export const dynamic = 'force-dynamic';
 
-function readFileDb() {
-  try {
-    const raw = fs.readFileSync(path.join(process.cwd(), 'calendar_db.json'), 'utf-8');
-    return JSON.parse(raw);
-  } catch {
-    return [];
-  }
-}
-
 export async function GET() {
   if (!process.env.POSTGRES_URL) {
-    return NextResponse.json({ message: 'No Vercel Postgres configured — using file store only.' }, { status: 200 });
+    return NextResponse.json({
+      message: 'No Vercel Postgres configured — file store only. No sync needed.',
+      entries: entries.length,
+    }, { status: 200 });
   }
 
   try {
@@ -33,13 +26,19 @@ export async function GET() {
       );
     `;
 
-    const entries = readFileDb();
     let upserted = 0;
 
     for (const act of entries) {
       await sql`
         INSERT INTO calendar_activities (id, date, title, description, status, time)
-        VALUES (${act.id}, ${act.date}, ${act.title}, ${act.description}, ${act.status}, ${act.time || ''})
+        VALUES (
+          ${String(act.id)},
+          ${act.date},
+          ${act.title},
+          ${act.description},
+          ${act.status},
+          ${act.time || ''}
+        )
         ON CONFLICT (id) DO UPDATE
           SET date        = EXCLUDED.date,
               title       = EXCLUDED.title,
@@ -57,7 +56,10 @@ export async function GET() {
     }, { status: 200 });
 
   } catch (error) {
-    console.error('Sync error:', error);
-    return NextResponse.json({ error: 'Sync failed', detail: error.message }, { status: 500 });
+    console.error('[/api/sync] Error:', error);
+    return NextResponse.json({
+      error: 'Sync failed',
+      detail: String(error?.message || error),
+    }, { status: 500 });
   }
 }

@@ -16,7 +16,7 @@ export async function GET() {
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { id, date, title, description, status, password } = body;
+    const { id, date, title, description, status, time, password } = body;
 
     // Public editing enabled per request
 
@@ -30,7 +30,8 @@ export async function POST(request) {
       date,
       title,
       description,
-      status
+      status,
+      time: time || ''
     });
 
     return NextResponse.json({ 
