@@ -134,5 +134,21 @@
     "description": "Reviewed the previous day's DHCP-based LAN implementation and advanced to router configuration, exploring FastEthernet and GigabitEthernet interfaces for inter-network communication. Worked on implementing networks with both dynamic (DHCP) and static IP addressing by connecting an additional hub through a router and verifying communication between different subnets. Additionally, completed topology design tasks involving a DHCP-enabled LAN integrated with a static-IP network and a multi-router network consisting of five routers, five switches, and end devices to strengthen practical understanding of routing, IP addressing, and network connectivity in Cisco Packet Tracer.",
     "status": "completed",
     "time": "9:00 AM – 5:00 PM"
+  },
+  {
+    "id": "22",
+    "date": "2026-07-09",
+    "title": "Day 18: IoT Network Integration using Cisco Packet Tracer",
+    "description": "Focused on IoT network integration using Cisco Packet Tracer. Configured routers using static routing to enable communication between different LANs and successfully connected a remote PC to an IoT server. Performed end-to-end connectivity testing using ping, identified and resolved routing and default gateway issues, and verified remote monitoring and control of IoT devices through the IoT Monitor interface.",
+    "status": "completed",
+    "time": "9:00 AM – 5:00 PM"
+  },
+  {
+    "id": "23",
+    "date": "2026-07-10",
+    "title": "Day 19: MSME Hackathon 6.0 – Idea Submission",
+    "description": "Dedicated the day to researching innovative and cost-effective solutions for MSME Hackathon 6.0. Explored various problem statements, conducted prior-art and patent searches using the WIPO PatentScope database, and finalized the project idea: TeaPulse – Acoustic & Current-Signature Predictive Maintenance and Energy Optimization System for MSMEs.",
+    "status": "completed",
+    "time": "9:00 AM – 6:00 PM"
   }
 ]
