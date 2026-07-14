@@ -158,5 +158,13 @@
     "description": "Covered fundamentals of Cloud Computing including IaaS, PaaS, and SaaS service models with their features and real-world applications. Created and activated an AWS Cloud account with $100 cloud credits for practical learning. Installed and configured the Go (Golang) programming language, then developed and executed multiple Go-based HTTP web services: Hello World, Calculator, Greeting, Square Number, Temperature Converter, Weather Prediction, and other simple services. Tested all services locally through localhost, gaining hands-on experience in both cloud computing concepts and Go web service development.",
     "status": "completed",
     "time": "9:00 AM – 5:00 PM"
+  },
+  {
+    "id": "25",
+    "date": "2026-07-14",
+    "title": "Day 21: Docker & Virtualization",
+    "description": "Learned the fundamentals of Docker and virtualization, including Docker Images, Containers, Dockerfiles, and the key differences between Virtual Machines and Docker containers. Practiced essential Docker commands for building, running, managing, and monitoring containers. Created a VMware account to explore virtualization technologies and a Tinkercad account for simulation-based learning. Gained a clear understanding of containerization, virtualization, and their role in modern application deployment and cloud environments.",
+    "status": "completed",
+    "time": "9:00 AM – 5:00 PM"
   }
 ]
