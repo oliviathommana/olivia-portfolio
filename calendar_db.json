@@ -150,5 +150,13 @@
     "description": "Dedicated the day to researching innovative and cost-effective solutions for MSME Hackathon 6.0. Explored various problem statements, conducted prior-art and patent searches using the WIPO PatentScope database, and finalized the project idea: TeaPulse – Acoustic & Current-Signature Predictive Maintenance and Energy Optimization System for MSMEs.",
     "status": "completed",
     "time": "9:00 AM – 6:00 PM"
+  },
+  {
+    "id": "24",
+    "date": "2026-07-13",
+    "title": "Day 20: Cloud Computing & Go Services",
+    "description": "Covered fundamentals of Cloud Computing including IaaS, PaaS, and SaaS service models with their features and real-world applications. Created and activated an AWS Cloud account with $100 cloud credits for practical learning. Installed and configured the Go (Golang) programming language, then developed and executed multiple Go-based HTTP web services: Hello World, Calculator, Greeting, Square Number, Temperature Converter, Weather Prediction, and other simple services. Tested all services locally through localhost, gaining hands-on experience in both cloud computing concepts and Go web service development.",
+    "status": "completed",
+    "time": "9:00 AM – 5:00 PM"
   }
 ]
