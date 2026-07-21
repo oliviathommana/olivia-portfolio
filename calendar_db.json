@@ -201,9 +201,9 @@
   },
   {
     "id": "26",
-    "date": "2026-07-18",
+    "date": "2026-07-17",
     "title": "Day 24: IoT Fundamentals, MQTT & Tinkercad Circuit Simulations",
-    "description": "Continued learning the fundamentals of IoT and Cloud Computing, with a focused session on the MQTT (Message Queuing Telemetry Transport) protocol and its role in lightweight, publish-subscribe communication between IoT devices. Introduced to Tinkercad Circuits for virtual simulation-based learning, followed by hands-on implementation of three simulation tasks: LED Blinking using Arduino Uno, Temperature Sensor interfacing with Arduino, and PIR Motion Sensor simulation for motion detection. These activities enhanced understanding of basic sensor interfacing, Arduino programming, and virtual circuit simulation using Tinkercad.",
+    "description": "Continued learning the fundamentals of IoT and Cloud Computing, with a session on the MQTT (Message Queuing Telemetry Transport) protocol and its role in lightweight communication between IoT devices. An introduction to Tinkercad Circuits was also provided, followed by hands-on implementation of three simulation tasks: LED Blinking using Arduino Uno, Temperature Sensor interfacing with Arduino, and PIR Motion Sensor simulation for motion detection. These activities enhanced understanding of basic sensor interfacing, Arduino programming, and virtual circuit simulation using Tinkercad.",
     "status": "completed",
     "time": "9:00 AM – 5:00 PM"
   },
