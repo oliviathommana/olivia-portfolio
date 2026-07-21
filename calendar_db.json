@@ -166,5 +166,21 @@
     "description": "Learned the fundamentals of Docker and virtualization, including Docker Images, Containers, Dockerfiles, and the key differences between Virtual Machines and Docker containers. Practiced essential Docker commands for building, running, managing, and monitoring containers. Created a VMware account to explore virtualization technologies and a Tinkercad account for simulation-based learning. Gained a clear understanding of containerization, virtualization, and their role in modern application deployment and cloud environments.",
     "status": "completed",
     "time": "9:00 AM – 5:00 PM"
+  },
+  {
+    "id": "26",
+    "date": "2026-07-18",
+    "title": "Day 24: IoT Fundamentals, MQTT & Tinkercad Circuit Simulations",
+    "description": "Continued learning the fundamentals of IoT and Cloud Computing, with a focused session on the MQTT (Message Queuing Telemetry Transport) protocol and its role in lightweight, publish-subscribe communication between IoT devices. Introduced to Tinkercad Circuits for virtual simulation-based learning, followed by hands-on implementation of three simulation tasks: LED Blinking using Arduino Uno, Temperature Sensor interfacing with Arduino, and PIR Motion Sensor simulation for motion detection. These activities enhanced understanding of basic sensor interfacing, Arduino programming, and virtual circuit simulation using Tinkercad.",
+    "status": "completed",
+    "time": "9:00 AM – 5:00 PM"
+  },
+  {
+    "id": "27",
+    "date": "2026-07-19",
+    "title": "Day 25: Docker Services Development & Practical Task Completion",
+    "description": "Successfully completed Docker service programs and additional assigned practical tasks. Developed, tested, and ran containerized applications using Docker, strengthening understanding of container lifecycle management, Dockerfile authoring, image builds, and service orchestration. Gained significant hands-on experience in containerized application development workflows and improved practical development skills in cloud-native environments.",
+    "status": "completed",
+    "time": "9:00 AM – 5:00 PM"
   }
 ]
