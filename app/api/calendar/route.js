@@ -9,19 +9,19 @@ export async function GET() {
     return NextResponse.json(activities, { status: 200 });
   } catch (error) {
     console.error('API GET error:', error);
-    return NextResponse.json({ error: 'Failed to fetch activities' }, { status: 500 });
+    return NextResponse.json({ error: 'Failed to fetch activities', detail: error.message }, { status: 500 });
   }
 }
 
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { id, date, title, description, status, time, password } = body;
+    const { id, date, title, description, status, time } = body;
 
     // Public editing enabled per request
 
     if (!date || !title || !description || !status) {
-      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
+      return NextResponse.json({ error: 'Missing required fields: date, title, description and status are required.' }, { status: 400 });
     }
 
     const activityId = id || Math.random().toString(36).substr(2, 9);
@@ -34,16 +34,19 @@ export async function POST(request) {
       time: time || ''
     });
 
-    return NextResponse.json({ 
-      success: true, 
-      message: 'Activity updated successfully',
+    return NextResponse.json({
+      success: true,
+      message: 'Activity saved successfully',
       id: activityId,
-      database: result.database 
+      database: result.database
     }, { status: 200 });
 
   } catch (error) {
     console.error('API POST error:', error);
-    return NextResponse.json({ error: 'Failed to save activity' }, { status: 500 });
+    return NextResponse.json({
+      error: 'Failed to save activity',
+      detail: error.message
+    }, { status: 500 });
   }
 }
 
@@ -51,21 +54,23 @@ export async function DELETE(request) {
   try {
     const { searchParams } = new URL(request.url);
     const id = searchParams.get('id');
-    // Public deletion enabled per request
 
     if (!id) {
       return NextResponse.json({ error: 'Missing activity ID' }, { status: 400 });
     }
 
     const result = await deleteActivity(id);
-    return NextResponse.json({ 
-      success: true, 
+    return NextResponse.json({
+      success: true,
       message: 'Activity deleted successfully',
-      database: result.database 
+      database: result.database
     }, { status: 200 });
 
   } catch (error) {
     console.error('API DELETE error:', error);
-    return NextResponse.json({ error: 'Failed to delete activity' }, { status: 500 });
+    return NextResponse.json({
+      error: 'Failed to delete activity',
+      detail: error.message
+    }, { status: 500 });
   }
 }

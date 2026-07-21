@@ -124,7 +124,8 @@ export default function Calendar({ embedded = false }) {
           setFormActivityId(data.id);
         }
       } else {
-        addToast(data.error || 'Failed to update database.', 'error');
+        const msg = data.detail ? `${data.error}: ${data.detail}` : (data.error || 'Failed to update database.');
+        addToast(msg, 'error');
       }
     } catch (err) {
       console.error(err);
@@ -157,7 +158,9 @@ export default function Calendar({ embedded = false }) {
         setFormTime('');
         setIsEditing(false);
       } else {
-        addToast('Failed to delete activity.', 'error');
+        const data = await res.json().catch(() => ({}));
+        const msg = data.detail ? `${data.error}: ${data.detail}` : (data.error || 'Failed to delete activity.');
+        addToast(msg, 'error');
       }
     } catch (err) {
       console.error(err);
