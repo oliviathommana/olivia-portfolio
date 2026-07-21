@@ -182,5 +182,13 @@
     "description": "Successfully completed Docker service programs and additional assigned practical tasks. Developed, tested, and ran containerized applications using Docker, strengthening understanding of container lifecycle management, Dockerfile authoring, image builds, and service orchestration. Gained significant hands-on experience in containerized application development workflows and improved practical development skills in cloud-native environments.",
     "status": "completed",
     "time": "9:00 AM – 5:00 PM"
+  },
+  {
+    "id": "28",
+    "date": "2026-07-20",
+    "title": "Day 26: Tinkercad IoT Circuit Design – Sensors & Actuators",
+    "description": "Designed and simulated 10 sensor-based and 10 actuator-based circuits using Tinkercad and Arduino Uno. Activities included interfacing various IoT sensors and actuators, understanding their working principles, implementing Arduino programs, and verifying outputs through simulation. This hands-on practice strengthened practical knowledge of sensor integration, actuator control, circuit design, and Arduino programming for IoT applications.",
+    "status": "completed",
+    "time": "9:00 AM – 5:00 PM"
   }
 ]
